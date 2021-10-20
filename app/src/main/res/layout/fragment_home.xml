@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    tools:context="ui.main.HomeFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_title"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/matte_black"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg">
+            
+        </ImageView>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@color/white"
+               android:layout_margin="10dp"
+               android:padding="8dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/light_red"
+                   android:textStyle="bold"
+                   android:text="@string/whats_happening"/>
+           </LinearLayout>
+
+           <TableLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:stretchColumns="1">
+
+               <TableRow>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/today_reports"
+                       android:textSize="15sp"
+                       android:textStyle="bold"
+                       android:textColor="@color/white"/>
+
+                   <TextView
+                       android:id="@+id/tvTodayReports"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:textSize="15sp"
+                       android:textColor="@color/white"
+                       android:textStyle="bold"
+                       android:textAlignment="textEnd"
+                       tools:text="0"/>
+               </TableRow>
+               <TableRow>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/tv_injured_count"
+                       android:textSize="15sp"
+                       android:textStyle="bold"
+                       android:textColor="@color/white"/>
+
+                   <TextView
+                       android:id="@+id/tvInjured"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:textSize="15sp"
+                       android:textColor="@color/white"
+                       android:textStyle="bold"
+                       android:textAlignment="textEnd"
+                       tools:text="0"/>
+               </TableRow>
+               <TableRow>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/tv_missing"
+                       android:textSize="15sp"
+                       android:textStyle="bold"
+                       android:textColor="@color/white"/>
+
+                   <TextView
+                       android:id="@+id/tvMissing"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:textSize="15sp"
+                       android:textColor="@color/white"
+                       android:textStyle="bold"
+                       android:textAlignment="textEnd"
+                       tools:text="0"/>
+               </TableRow>
+               <TableRow>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/tv_fatalities"
+                       android:textSize="15sp"
+                       android:textStyle="bold"
+                       android:textColor="@color/white"/>
+
+                   <TextView
+                       android:id="@+id/tvFatalities"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginStart="10dp"
+                       android:textSize="15sp"
+                       android:textColor="@color/white"
+                       android:textStyle="bold"
+                       android:textAlignment="textEnd"
+                       tools:text="0"/>
+               </TableRow>
+           </TableLayout>
+       </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_latest_reports"
+            android:textStyle="bold"
+            android:textColor="@color/gray"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:text="@string/btn_view_all"
+            android:letterSpacing="0"
+            android:textStyle="bold"
+            android:textColor="@color/light_red"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:iconTint="@color/light_red"
+            app:iconGravity="textEnd"
+            app:iconSize="15dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLatestReports"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvNoRecordsAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/rv_status"
+        android:textSize="18sp"
+        android:textColor="@color/gray"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Incident Report</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_welcome_title">Welcome Back!</string>
+    <string name="sign_in_msg">Sign in to continue.</string>
+    <string name="login_email_hint">Email Address</string>
+    <string name="login_hint_password">Password</string>
+    <string name="app_logo">App Logo</string>
+    <string name="tv_btn_go_signup">Need an account? Click here.</string>
+    <string name="btn_login">Login</string>
+    <string name="signup_hint_full_name">Full Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_register_go_login">Already have an account? Click Here.</string>
+    <string name="btn_register">Register</string>
+    <string name="btnLogout">Logout</string>
+    <string name="content_desc_fab">Add Button</string>
+    <string name="bottom_nav_home_text">Home</string>
+    <string name="bottom_nav_reports_text">Reports</string>
+    <string name="home_title">Connect with MediReport.</string>
+    <string name="today_reports">Today\'s Reports</string>
+    <string name="tv_injured_count">Injured</string>
+    <string name="tv_missing">Missing</string>
+    <string name="tv_fatalities">Fatalities</string>
+    <string name="tv_latest_reports">Latest Reports</string>
+    <string name="btn_view_all">View all</string>
+    <string name="rv_status">There are no reports...</string>
+    <string name="whats_happening">What\'s happening</string>
+    <string name="reported_at">Reported at:</string>
+    <string name="reported_by">Reported by:</string>
+    <string name="report_details_time_and_location">Time and Location</string>
+    <string name="report_details_list_of_victims">List of Victims</string>
+    <string name="report_details_description">Description</string>
+    <string name="report_details_number_of_victims">Number of Victims</string>
+    <string name="rv_rd_status">No victims...</string>
+    
+    <string-array name="incident_types">
+        <item>Car Accident</item>
+        <item>Fire Accident</item>
+        <item>Explosion</item>
+        <item>Firearms</item>
+        <item>Flooding</item>
+        <item>Earthquake</item>
+        <item>Volcanic Eruption</item>
+    </string-array>
+</resources>

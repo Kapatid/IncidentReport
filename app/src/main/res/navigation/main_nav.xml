@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/pagerFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.incidentreport.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.incidentreport.ui.main.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.example.incidentreport.ui.main.PagerFragment"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_pager" >
+        <action
+            android:id="@+id/action_pagerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_pagerFragment_to_createReportFragment"
+            app:destination="@id/createReportFragment" />
+        <action
+            android:id="@+id/action_pagerFragment_to_reportDetailsFragment"
+            app:destination="@id/reportDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createReportFragment"
+        android:name="com.example.incidentreport.ui.main.CreateReportFragment"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_create_report" >
+        <action
+            android:id="@+id/action_createReportFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editReportFragment"
+        android:name="com.example.incidentreport.ui.main.EditReportFragment"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_edit_report" >
+        <action
+            android:id="@+id/action_editReportFragment_to_reportDetailsFragment"
+            app:destination="@id/reportDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportDetailsFragment"
+        android:name="com.example.incidentreport.ui.main.ReportDetailsFragment"
+        android:label="fragment_pager"
+        tools:layout="@layout/fragment_report_details" >
+        <action
+            android:id="@+id/action_reportDetailsFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+        <action
+            android:id="@+id/action_reportDetailsFragment_to_editReportFragment"
+            app:destination="@id/editReportFragment" />
+    </fragment>
+</navigation>
