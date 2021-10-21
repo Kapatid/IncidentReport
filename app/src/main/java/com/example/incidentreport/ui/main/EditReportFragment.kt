@@ -55,16 +55,14 @@ class EditReportFragment : Fragment(R.layout.fragment_edit_report) {
         victimsList = report.victims as MutableList<String>
 
         binding.btnBack.setOnClickListener {
-            findNavController().navigate(
-                EditReportFragmentDirections.actionEditReportFragmentToReportDetailsFragment()
-            )
+            requireActivity().onBackPressed()
         }
 
         binding.erIncidentTypeTextView.setAdapter(ArrayAdapter(
             requireContext(), R.layout.list_item, resources.getStringArray(R.array.incident_types)
         ))
 
-        (SimpleDateFormat("yyyy-d-MM", Locale.getDefault())
+        (SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
             .format(report.dateTime)).also {
                 binding.erTVDate.text = it }
 

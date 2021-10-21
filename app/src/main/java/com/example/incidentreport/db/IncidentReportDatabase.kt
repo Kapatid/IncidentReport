@@ -87,8 +87,8 @@ class IncidentReportDatabase(context: Context) :
     }
 
     /**
-     * Read employees from database in form of [HashSet].
-     * @return employeeList [List<Employee>]
+     * Read incidentReports from database in form of [HashSet].
+     * @return incidentReports [List<IncidentReport>]
      */
     fun getIncidentReports(): List<IncidentReport> {
 
@@ -343,20 +343,23 @@ class IncidentReportDatabase(context: Context) :
         return todayReports
     }
 
-    fun latestReports(): List<IncidentReport> {
+    fun latestReports(max: Int): List<IncidentReport> {
 
-        val reports = getIncidentReports()
+        val reports = getIncidentReports().toMutableList()
         val latestReports = emptyList<IncidentReport>().toMutableList()
 
-        val maxReports = 10
-        for ((curr, report) in reports.withIndex()) {
-            if (curr < maxReports ) { latestReports.add(report) }
-            else break
+        reports.sortedByDescending { it.createdAt }
+        reports.reverse()
+
+        if (max > 0) {
+            for ((curr, report) in reports.withIndex()) {
+                if (curr < max ) { latestReports.add(report) }
+                else break
+            }
+
+            return latestReports
+        } else {
+            return reports
         }
-
-        latestReports.sortedByDescending { it.createdAt }
-        latestReports.reverse()
-
-        return latestReports
     }
 }

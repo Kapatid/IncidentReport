@@ -4,12 +4,14 @@
     android:id="@+id/rowIncidentReport"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_white_fill"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_corners_white_subtle"
     android:gravity="center_vertical"
     android:orientation="vertical"
     android:padding="12dp">
 
     <TextView
+        android:layout_marginHorizontal="8dp"
         android:id="@+id/tvIncidentType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,10 +20,11 @@
         tools:text="Incident Type"/>
 
     <TextView
+        android:layout_marginHorizontal="8dp"
         android:id="@+id/tvhRowIncidentReport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/gray"
-        android:textSize="12sp"
+        android:textSize="14sp"
         tools:text="06:30 AM • Oct 06 2021 • Full Name"/>
 </LinearLayout>

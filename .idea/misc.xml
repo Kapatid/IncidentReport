@@ -10,6 +10,7 @@
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/bg_white_fill.xml" value="0.2851851851851852" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.371875" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.209375" />
+        <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.27685185185185185" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/drawable/ripple_border_red.xml" value="0.371875" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/font/poppins_font_family.xml" value="0.2682291666666667" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/edit_victim_row_layout.xml" value="0.25" />
@@ -19,7 +20,7 @@
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_pager.xml" value="0.19322916666666667" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_report_details.xml" value="0.24259259259259258" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_reports.xml" value="0.25" />
-        <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_signup.xml" value="0.33" />
+        <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/fragment_signup.xml" value="0.25" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/incident_report_row_layout.xml" value="0.25" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/list_item.xml" value="0.35572916666666665" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/layout/main_activity.xml" value="0.22" />
@@ -28,6 +29,63 @@
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/bottom_nav_menu.xml" value="0.35572916666666665" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/menu/incident_type_menu.xml" value="0.35572916666666665" />
         <entry key="..\:/Android/AndroidStudioProjects/IncidentReport/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2851851851851852" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/drawable/bg_red_right_rounded.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/drawable/rounded_corners.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/drawable/rounded_corners_buttons.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/drawable/rounded_corners_white.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/edit_victim_row_layout.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_create_report.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_edit_report.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_home.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_pager.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_report_details.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_reports.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/fragment_signup.xml" value="0.2988679352838745" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/incident_report_row_layout.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/list_item.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/main_activity.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/main_fragment.xml" value="0.2988679352838745" />
+        <entry key="..\:/Users/JERWIN/AndroidStudioProjects/IncidentReport-master/app/src/main/res/layout/victim_row_layout.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable/bg_red_circle.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable/ripple_border_red.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable/rounded_corners.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable/rounded_corners_gray.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/drawable/rounded_corners_white.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/fragment_home.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/fragment_report_details.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/fragment_reports.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/fragment_signup.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/incident_report_row_layout.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/main_activity.xml" value="0.3145833333333333" />
+        <entry key="..\:/Users/JERWIN/Desktop/IncidentReport-master/app/src/main/res/layout/main_fragment.xml" value="0.2988679352838745" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/bg_red_fill.xml" value="0.4087179487179487" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/bg_white_fill.xml" value="0.4087179487179487" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/ripple_border_red.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/ripple_border_white.xml" value="0.4087179487179487" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/rounded_corners.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/rounded_corners_buttons.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/rounded_corners_gray.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/rounded_corners_top_white.xml" value="0.3648148148148148" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/rounded_corners_white.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/drawable/rounded_corners_white_subtle.xml" value="0.3648148148148148" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/edit_victim_row_layout.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_create_report.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_edit_report.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_home.xml" value="0.39895833333333336" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_pager.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_report_details.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_reports.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/fragment_signup.xml" value="0.39895833333333336" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/incident_report_row_layout.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/list_item.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/main_activity.xml" value="0.39895833333333336" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/main_fragment.xml" value="0.36563245823389023" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/layout/victim_row_layout.xml" value="0.3858695652173913" />
+        <entry key="..\:/Users/justi/Documents/JR/Works and Projects/Android Studio/IncidentReport Copy/IncidentReport-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.39895833333333336" />
       </map>
     </option>
   </component>

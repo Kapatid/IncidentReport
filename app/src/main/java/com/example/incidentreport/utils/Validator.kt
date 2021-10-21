@@ -34,15 +34,16 @@ class Validator {
     companion object {
 
         // Default validation messages
-        private val PASSWORD_POLICY = """Password should be minimum 8 characters long,
-            |should contain at least one capital letter,
+        private val PASSWORD_POLICY = """Password should be at least 8 characters long,
+            |at least one capital letter,
             |at least one small letter,
             |at least one number and
-            |at least one special character among ~!@#$%^&*()-_=+|[]{};:'\",<.>/?""".trimMargin()
+            |at least one special character""".trimMargin()
+        // among ~!@#$%^&*()-_=+|[]{};:'\",<.>/?
 
-        private const val NAME_VALIDATION_MSG = "Enter a valid name"
-        private const val EMAIL_VALIDATION_MSG = "Enter a valid email address"
-        private const val PHONE_VALIDATION_MSG = "Enter a valid phone number"
+        private const val NAME_VALIDATION_MSG = "Enter a valid name."
+        private const val EMAIL_VALIDATION_MSG = "Enter a valid email address."
+        private const val PHONE_VALIDATION_MSG = "Enter a valid phone number."
 
         /**
          * Retrieve string data from the parameter.

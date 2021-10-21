@@ -39,9 +39,7 @@ class ReportDetailsFragment : Fragment(R.layout.fragment_report_details) {
         _binding = FragmentReportDetailsBinding.inflate(inflater, container, false)
 
         binding.btnBack.setOnClickListener {
-            findNavController().navigate(
-                ReportDetailsFragmentDirections.actionReportDetailsFragmentToPagerFragment()
-            )
+            requireActivity().onBackPressed()
         }
 
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)

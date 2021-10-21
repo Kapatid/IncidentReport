@@ -28,15 +28,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/light_gray"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="25dp"
+            android:paddingBottom="25dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Edit Report"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                android:textColor="@color/matte_black"/>
+                android:gravity="start"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:lineHeight="30sp"
+                    android:lineSpacingExtra="0dp"
+                    android:text="Edit Report"
+                    android:textColor="@color/matte_black"
+                    android:textSize="36sp" />
+            </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/erIncidentTypeMenu"
@@ -46,7 +57,8 @@
                 android:hint="Incident Type"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp">
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_marginTop="15dp">
 
                 <AutoCompleteTextView
                     android:id="@+id/erIncidentTypeTextView"
@@ -60,9 +72,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_details_time_and_location"
+                android:layout_marginBottom="8dp"
                 android:textColor="@color/gray"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +85,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corners_white">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/erTVDate"
@@ -80,9 +95,10 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/light_red"
-                        android:background="@color/white"
-                        android:textSize="18sp"
+                        android:background="@drawable/rounded_corners_white"
+                        android:textSize="16sp"
                         android:importantForAutofill="no"
+                        android:fontFamily="@font/poppins"
                         tools:text="Date"/>
 
                     <Button
@@ -90,16 +106,19 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
-                        android:background="@color/light_red"
+                        android:background="@drawable/bg_red_right_rounded"
                         android:text="Select Date"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"
                         android:textColor="@color/white"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_corners_white">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/erTVTime"
@@ -107,11 +126,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:background="@color/white"
+                        android:background="@drawable/rounded_corners_white"
                         android:textColor="@color/light_red"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:importantForAutofill="no"
-                        tools:text="TIME"/>
+                        tools:text="Time"/>
 
                     <Button
                         android:id="@+id/erBtnTime"
@@ -119,28 +138,35 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
                         android:gravity="center"
-                        android:background="@color/light_red"
+                        android:background="@drawable/bg_red_right_rounded"
                         android:text="Select Time"
-                        android:textColor="@color/white" />
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
                 </LinearLayout>
 
                 <EditText
                     android:id="@+id/erLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="10dp"
-                    android:background="@color/white"
-                    android:hint="Enter Location"/>
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_corners_white"
+                    android:hint="Enter Location"
+                    android:textSize="14sp"
+                    android:padding="14dp"/>
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/report_details_number_of_victims"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
                 android:textColor="@color/gray"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/report_details_number_of_victims"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -149,10 +175,9 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="8dp"
                     android:layout_weight="1"
-                    android:paddingVertical="8dp"
-                    android:background="@color/white"
+                    android:paddingVertical="20dp"
+                    android:background="@drawable/rounded_corners"
                     android:orientation="vertical">
 
                     <EditText
@@ -163,7 +188,7 @@
                         android:backgroundTint="@color/light_red"
                         android:padding="2dp"
                         android:textColor="@color/light_red"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:inputType="number"
                         android:hint="0"/>
 
@@ -172,6 +197,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Injured"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"
                         android:textColor="@color/matte_black" />
                 </LinearLayout>
                 <LinearLayout
@@ -179,8 +206,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="8dp"
                     android:layout_weight="1"
-                    android:paddingVertical="8dp"
-                    android:background="@color/white"
+                    android:paddingVertical="20dp"
+                    android:background="@drawable/rounded_corners"
                     android:orientation="vertical">
 
                     <EditText
@@ -191,7 +218,7 @@
                         android:backgroundTint="@color/light_red"
                         android:padding="2dp"
                         android:textColor="@color/light_red"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:inputType="number"
                         android:hint="0"/>
 
@@ -200,15 +227,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Missing"
-                        android:textColor="@color/matte_black" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/matte_black"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="8dp"
                     android:layout_weight="1"
-                    android:paddingVertical="8dp"
-                    android:background="@color/white"
+                    android:paddingVertical="20dp"
+                    android:background="@drawable/rounded_corners"
                     android:orientation="vertical">
 
                     <EditText
@@ -219,7 +247,7 @@
                         android:backgroundTint="@color/light_red"
                         android:padding="2dp"
                         android:textColor="@color/light_red"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:inputType="number"
                         android:hint="0"/>
 
@@ -227,7 +255,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/poppins"
                         android:text="Fatalities"
+                        android:textSize="16sp"
                         android:textColor="@color/matte_black" />
                 </LinearLayout>
             </LinearLayout>
@@ -235,35 +265,39 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/report_details_description"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
                 android:textColor="@color/gray"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/report_details_description"/>
             <EditText
                 android:id="@+id/erIncidentDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:padding="14dp"
                 android:hint="Type a description..."
+                android:textSize="14sp"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                android:background="@color/white"
+                android:background="@drawable/rounded_corners_white"
                 android:textColor="@color/matte_black"
                 android:importantForAutofill="no" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/report_details_list_of_victims"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
                 android:textColor="@color/gray"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/report_details_list_of_victims"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvERReports"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_marginTop="10dp"
                 android:visibility="visible"
                 tools:visibility="gone" />
 
@@ -274,7 +308,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/rv_rd_status"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textColor="@color/gray"
                 android:visibility="gone"
                 tools:visibility="visible" />
@@ -286,8 +320,9 @@
                 android:layout_gravity="center"
                 android:padding="0dp"
                 android:text="Add Victim"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
                 android:letterSpacing="0"
-                android:textStyle="bold"
                 android:textColor="@color/light_red"
                 android:textAllCaps="false"
                 android:background="@android:color/transparent"
@@ -299,11 +334,13 @@
                 android:id="@+id/btnUpdateReport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:background="@drawable/ripple_border_red"
-                android:textStyle="bold"
+                android:text="Edit Report"
+                android:textSize="16sp"
                 android:textAllCaps="false"
-                android:text="Update Report"/>
+                android:layout_marginTop="10dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:fontFamily="@font/poppins_medium"/>
         </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

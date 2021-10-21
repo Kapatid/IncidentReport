@@ -16,7 +16,7 @@ class PagerFragment : Fragment(R.layout.fragment_pager) {
 
         val loggedInUser = MainActivity.getLoggedInUser(requireActivity())
         if (loggedInUser != null) {
-            "Hello ${loggedInUser.fullName}!".also { tvLoggedInUser.text = it }
+            loggedInUser.fullName.also { tvLoggedInUser.text = it }
         } else {
             findNavController().navigate(
                 PagerFragmentDirections.actionPagerFragmentToMainFragment()

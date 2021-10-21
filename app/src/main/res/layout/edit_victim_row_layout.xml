@@ -7,7 +7,7 @@
     android:background="@drawable/bg_white_fill"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="12dp">
+    android:layout_marginBottom="5dp">
 
     <EditText
         android:id="@+id/etVictimName"
@@ -20,7 +20,7 @@
         android:textColor="@color/matte_black"
         android:textSize="16sp"
         android:hint="Victim Name"
-        android:inputType="text"
+        android:inputType="text|textCapWords"
         android:importantForAutofill="no" />
 
     <com.google.android.material.button.MaterialButton

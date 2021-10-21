@@ -1,13 +1,18 @@
 package com.example.incidentreport.ui.main
 
+import android.Manifest
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.telephony.SmsManager
 import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.incidentreport.MainActivity
@@ -23,6 +28,8 @@ import java.util.*
 
 class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
 
+    private val permissionRequest = 101
+
     private val victimsAdapter by lazy { EditableVictimsAdapter() }
 
     private var _binding: FragmentCreateReportBinding? = null
@@ -34,9 +41,9 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
     private var mHour = 0
     private var mMinute = 0
 
-    private val permissionRequest = 101
-
     private val victimsList = emptyList<String>().toMutableList()
+
+    private lateinit var incidentReport: IncidentReport
 
     companion object {
         /**
@@ -47,11 +54,25 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
         fun checkDigit(number: Int) = if (number <= 9) "0$number" else number.toString()
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val permissionCheck = ContextCompat.checkSelfPermission(
+            requireContext(), Manifest.permission.SEND_SMS
+        )
+
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(requireActivity(),
+                arrayOf(Manifest.permission.SEND_SMS), permissionRequest)
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentCreateReportBinding.inflate(inflater, container, false)
 
         binding.incidentTypeTextView.setAdapter(ArrayAdapter(
@@ -59,9 +80,7 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
         ))
 
         binding.btnBack.setOnClickListener {
-            findNavController().navigate(
-                CreateReportFragmentDirections.actionCreateReportFragmentToPagerFragment()
-            )
+            requireActivity().onBackPressed()
         }
 
         binding.btnDate.setOnClickListener {
@@ -95,10 +114,9 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
             ).show()
         }
 
-        binding.btnCreateReport.setOnClickListener {
-            saveIncidentReport(binding)
-        }
-
+        binding.etMissing.setText("0")
+        binding.etInjured.setText("0")
+        binding.etFatalities.setText("0")
         binding.rvVictims.visibility = View.GONE
         binding.tvNoRecordsAvailable.visibility = View.VISIBLE
 
@@ -118,6 +136,10 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
                 binding.rvVictims.visibility = View.GONE
                 binding.tvNoRecordsAvailable.visibility = View.VISIBLE
             }
+        }
+
+        binding.btnCreateReport.setOnClickListener {
+            saveIncidentReport(binding)
         }
 
         return binding.root
@@ -148,27 +170,39 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
 
             val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault())
 
-            val status = db.addIncidentReport(
-                IncidentReport(0,
-                    reporter = reporter,
-                    incidentType = incidentType,
-                    dateTime = sdf.parse(dateTime) as Date,
-                    location = location,
-                    missing = missing.toInt(),
-                    injured = injured.toInt(),
-                    fatalities = fatalities.toInt(),
-                    description = incidentDescription,
-                    victims = victimsAdapter.getVictims()
-                )
+            incidentReport = IncidentReport(0,
+                reporter = reporter,
+                incidentType = incidentType,
+                dateTime = sdf.parse(dateTime) as Date,
+                location = location,
+                missing = missing.toInt(),
+                injured = injured.toInt(),
+                fatalities = fatalities.toInt(),
+                description = incidentDescription,
+                victims = victimsAdapter.getVictims()
             )
 
+            val status = db.addIncidentReport(incidentReport)
+
             if (status > -1) {
-//                sendMessage()
-                Snackbar.make(
-                    binding.clCreateReport,
-                    "Incident report successfully created.",
-                    Snackbar.LENGTH_SHORT
-                ).show()
+                val permissionCheck = ContextCompat.checkSelfPermission(
+                    requireContext(), Manifest.permission.SEND_SMS
+                )
+
+                if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+                    myMessage()
+                    Snackbar.make(
+                        binding.clCreateReport,
+                        "Incident report successfully created and SMS sent.",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Snackbar.make(
+                        binding.clCreateReport,
+                        "Incident report created but unable to send SMS.",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
             }
         } else {
             Snackbar.make(
@@ -176,6 +210,35 @@ class CreateReportFragment : Fragment(R.layout.fragment_create_report) {
                 "All fields must not be blank.",
                 Snackbar.LENGTH_SHORT
             ).show()
+        }
+    }
+
+    private fun myMessage() {
+        val phoneNumber = "15555215554"
+        val myMsg = "INCIDENT REPORT " +
+                "\nReporter: ${incidentReport.reporter}" +
+                "\nIncident Type: ${incidentReport.incidentType}" +
+                "\nDate & Time: ${incidentReport.dateTime}" +
+                "\nIncident Description: ${incidentReport.description}" +
+                "\nInjured: ${incidentReport.injured}" +
+                "\nMissing: ${incidentReport.missing}" +
+                "\nFatality: ${incidentReport.fatalities}" +
+                "\nVictims: ${incidentReport.victims.toString()
+                    .replace("[", "").replace("]", "")}" +
+                "\nLocation: ${incidentReport.location}" +
+                "\nCreation Date: ${incidentReport.createdAt}"
+
+        val smsManager: SmsManager = SmsManager.getDefault()
+
+        try {
+            val parts = smsManager.divideMessage(myMsg)
+
+            smsManager.sendMultipartTextMessage(
+                phoneNumber, null, parts,
+                null, null
+            )
+        } catch (ex: java.lang.Exception) {
+            ex.printStackTrace()
         }
     }
 }
